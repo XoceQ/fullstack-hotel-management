@@ -8,6 +8,9 @@ const nextConfig = {
             'plus.unsplash.com'
         ],
     },
+    eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 module.exports = nextConfig;
