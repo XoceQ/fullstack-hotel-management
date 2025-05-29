@@ -6,7 +6,7 @@ import { LiaFireExtinguisherSolid } from 'react-icons/lia';
 import { AiOutlineMedicineBox } from 'react-icons/ai';
 import { GiSmokeBomb } from 'react-icons/gi';
 import { useState } from 'react';
-import axios from 'axios';
+
 
 import { getRoom } from '@/libs/apis';
 import LoadingSpinner from '../../loading';
@@ -51,10 +51,6 @@ const RoomDetails = (props: { params: { slug: string } }) => {
 
         if (checkinDate > checkoutDate)
             return toast.error('Please choose a valid checkin period');
-
-        const numberOfDays = calcNumDays();
-
-        const hotelRoomSlug = room.slug.current;
 
     }
 

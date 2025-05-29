@@ -1,3 +1,5 @@
-export default {
+const mockedAxios = {
   post: jest.fn(),
 };
+
+export default mockedAxios;
