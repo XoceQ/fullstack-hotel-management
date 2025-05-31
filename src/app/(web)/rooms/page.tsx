@@ -35,7 +35,6 @@ const Rooms = () => {
   const filterRooms = (rooms: Room[]) => {
     return rooms.filter(room => {
       // Apply room type filter
-
       if (
         roomTypeFilter &&
         roomTypeFilter.toLowerCase() !== 'all' &&
@@ -43,7 +42,6 @@ const Rooms = () => {
       ) {
         return false;
       }
-
       //   Apply search query filter
       if (
         searchQuery &&
@@ -51,7 +49,6 @@ const Rooms = () => {
       ) {
         return false;
       }
-
       return true;
     });
   };
@@ -66,7 +63,6 @@ const Rooms = () => {
         setRoomTypeFilter={setRoomTypeFilter}
         setSearchQuery={setSearchQuery}
       />
-
       <div className='flex mt-20 justify-between flex-wrap'>
         {filteredRooms.map(room => (
           <RoomCard key={room._id} room={room} />
