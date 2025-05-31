@@ -14,13 +14,13 @@ const NewsLetter = () => {
 
     if (!form.current) return;
 
-    emailjs
-      .sendForm(
-        'service_fir9j5o',
-        'template_lvrj2kn',
-        form.current,
-        'B4a5Zuf4whx9ucxJS'
-      )
+    emailjs.sendForm(
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+      form.current,
+      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+    )
+
       .then(
         () => {
           setMessageSent(true);
